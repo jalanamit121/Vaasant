@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.winbee.vaasant.R;
+//boss log out pr click krne pr direct logout ho rha he ek warning to deni chhiye apn ko?
 
 public class bottomDialogForAttachment extends BottomSheetDialogFragment {
     BottomSheetListener bottomSheetListener;

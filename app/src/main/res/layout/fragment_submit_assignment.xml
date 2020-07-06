@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.SubmitAssignmentHomework">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp">
+
+            <LinearLayout
+                android:id="@+id/layout_description"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:padding="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/proximanovaregular"
+                    android:hint="Description"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="10"
+                    android:textColor="@color/edit_text"
+                    android:textColorHint="@color/edit_text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/layout_description"/>
+            <Button
+                android:id="@+id/addImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTintMode="screen"
+                android:text="Add File"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/image_view"
+                android:padding="14dp"
+                android:layout_centerInParent="true"
+                />
+
+            <Button
+                android:id="@+id/uploadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload File"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/holo_purple"
+                android:backgroundTintMode="screen"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/image_view"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

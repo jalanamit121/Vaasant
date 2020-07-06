@@ -13,6 +13,8 @@ import com.winbee.vaasant.Models.SIADMainModel;
 import com.winbee.vaasant.Models.SectionDetailsMainModel;
 import com.winbee.vaasant.Models.SemesterName;
 import com.winbee.vaasant.Models.StartTestModel;
+import com.winbee.vaasant.Models.SubmitAssignment;
+import com.winbee.vaasant.Models.SubmittedAssignment;
 import com.winbee.vaasant.Models.UrlName;
 import com.winbee.vaasant.Models.UrlNewQuestion;
 import com.winbee.vaasant.Models.UrlQuestion;
@@ -131,8 +133,9 @@ public interface ClientApi {
     @POST("fetch-section-details.php")
     @FormUrlEncoded
     Call<SectionDetailsMainModel> fetchSectionDetails(
-            String orgCode, @Field("org_code") String org_code,
-            @Field("auth_code") String auth_code
+            @Field("org_code") String org_code,
+            @Field("auth_code") String auth_code,
+            @Field("user_id") String user_id
     );
 
     @POST("fetch-section-individual-assessment-cover-details.php")
@@ -184,4 +187,21 @@ public interface ClientApi {
             @Field("UserID") String UserID
     );
 
+    @POST("insert_assignment_data.php")
+    @FormUrlEncoded
+    Call<SubmitAssignment> getSubmitAssignment(
+            @Field("org_id") String org_id,
+            @Field("user_id") String user_id,
+            @Field("course_id") String course_id,
+            @Field("assignment_id") String assignment_id,
+            @Field("attachment") String attachment,
+            @Field("description") String description,
+            @Field("doc_type") String doc_type
+    );
+
+    @POST("fetch_assignment_submitted_student.php")
+    Call<SubmittedAssignment> getSubmitedAssignment(
+            @Query("org_id") String org_id,
+            @Query("user_id") String user_id
+    );
 }

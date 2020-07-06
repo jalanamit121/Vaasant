@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ui.HomeworkFragment"
-    android:clickable="true"
-    android:focusable="true"
-    >
-
+    tools:context=".Ui.SubmitedAssignment">
     <RelativeLayout
         android:id="@+id/today_classes"
         android:layout_width="match_parent"
@@ -20,30 +16,36 @@
             android:id="@+id/noclasses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No Assignment"
+            android:text="No Assignment Submitted"
             android:layout_centerInParent="true"
             android:fontFamily="@font/proximanovaregular"
             android:textSize="16dp"
             android:textStyle="bold"
             android:textColor="@color/gradientViolet" />
     </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/assignment_review"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recycler_view_homework"
-        android:layout_above="@id/submittedAssignmentBtn"
-        />
+        android:nestedScrollingEnabled="false"
+        android:layout_above="@id/AssignmentButton"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
     <Button
-        android:id="@+id/submittedAssignmentBtn"
+        android:id="@+id/AssignmentButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="Submitted Assignment"
+        android:text="Assignment"
         android:background="@android:color/transparent"
         android:backgroundTint="@android:color/holo_purple"
         android:backgroundTintMode="screen"
+
+
+
+
+
+
         />
-
-
-
 </RelativeLayout>

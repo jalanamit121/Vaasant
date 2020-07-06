@@ -148,32 +148,15 @@ public class HomeFragment extends Fragment implements HomeItemAdapter.OnHomeItem
                 break;
 
             case "Attendance":
-            //    Toast.makeText(getContext(), "My Attendance pressed", Toast.LENGTH_SHORT).show();
-//                MyAttendanceFragment myAttendanceFragment = new MyAttendanceFragment();
-//                if (getFragmentManager() != null) {
-//                    fragmentTransaction = getFragmentManager().beginTransaction()
-//                            .replace(R.id.homeFrame,myAttendanceFragment,"MyProfileFragment");
-//                    fragmentTransaction.addToBackStack(null);
-//                    fragmentTransaction.commit();
-//                }
-//                Home.titleHome.setText("Attendance");
                 callAttendenceService();
                 break;
 
             case "Test":
-              //  Toast.makeText(getContext(), "Test pressed", Toast.LENGTH_SHORT).show();
-                TestFragment testFragment = new TestFragment();
-                if (getFragmentManager() != null) {
-                    fragmentTransaction = getFragmentManager().beginTransaction()
-                            .replace(R.id.homeFrame,testFragment,"MyProfileFragment");
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
-                }
+                Toast.makeText(getContext(), "Coming Soon", Toast.LENGTH_SHORT).show();
                 Home.titleHome.setText("Test");
                 break;
 
             case "Fee":
-           //     Toast.makeText(getContext(), "Fee pressed", Toast.LENGTH_SHORT).show();
                 FeeFragment feeFragment = new FeeFragment();
                 if (getFragmentManager() != null) {
                     fragmentTransaction = getFragmentManager().beginTransaction()
@@ -185,7 +168,6 @@ public class HomeFragment extends Fragment implements HomeItemAdapter.OnHomeItem
                 break;
 
             case "Message":
-         //       Toast.makeText(getContext(), "Message pressed", Toast.LENGTH_SHORT).show();
                 MessageFragment messageFragment = new MessageFragment();
                 if (getFragmentManager() != null) {
                     fragmentTransaction = getFragmentManager().beginTransaction()
@@ -197,7 +179,6 @@ public class HomeFragment extends Fragment implements HomeItemAdapter.OnHomeItem
                 break;
 
             case "Gallery":
-            //    Toast.makeText(getContext(), "Gallery pressed", Toast.LENGTH_SHORT).show();
                 GalleryFragement galleryFragement = new GalleryFragement();
                 if (getFragmentManager() != null) {
                     fragmentTransaction = getFragmentManager().beginTransaction()
@@ -241,40 +222,9 @@ public class HomeFragment extends Fragment implements HomeItemAdapter.OnHomeItem
         });
     }
 
-//    private void updateAlertDialog() {
-//        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-//
-//        //Set title
-//        builder.setTitle(getResources().getString(R.string.app_name));
-//        builder.setMessage("update available");
-//        builder.setCancelable(false);
-//        builder.setPositiveButton("update", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//                startActivity(new Intent(Intent.ACTION_VIEW,
-//                        Uri.parse("market://details?id="+getPackageName())));
-//
-//                //dismiss dialog
-//                dialogInterface.dismiss();
-//            }
-//        });
-//
-//        builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//
-//                dialogInterface.cancel();
-//
-//            }
-//        });
-//
-//        builder.show();
-//    }
-
     private void updateAttendenceDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        //Set title
         builder.setTitle(getResources().getString(R.string.app_name));
         builder.setMessage(AssignmentData.AttendenceMessage);
         builder.setCancelable(false);

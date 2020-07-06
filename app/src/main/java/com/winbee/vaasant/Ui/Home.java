@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,11 +18,14 @@ import com.winbee.vaasant.Utils.SharedPrefManager;
 
 import java.util.Objects;
 
-public class Home extends AppCompatActivity {
+public class Home extends AppCompatActivity implements bottomDialogForAttachment.BottomSheetListener
+, DialogAttachment.OnConfirmClicked {
 
     ImageView sideBar, notification , home , website, aboutUs , contactUs,logOut;
    @SuppressLint("StaticFieldLeak")
    static TextView titleHome;
+
+   HomeworkDiscriptionFragment homeworkDiscriptionFragment;
 
 
 
@@ -139,5 +143,34 @@ public class Home extends AppCompatActivity {
         SharedPrefManager.getInstance(this).logout();
         startActivity(new Intent(this, Login.class));
         Objects.requireNonNull(this).finish();
+    }
+
+    @Override
+    public void onPhotoAttachmentClicked() {
+
+        homeworkDiscriptionFragment= (HomeworkDiscriptionFragment) getSupportFragmentManager()
+                .findFragmentByTag("HomeworkDiscriptionFragment");
+        if (homeworkDiscriptionFragment != null) {
+            homeworkDiscriptionFragment.onPhotoAttachmentClicked();
+        }
+    }
+
+    @Override
+    public void onPdfAttachmentClicked() {
+
+        homeworkDiscriptionFragment= (HomeworkDiscriptionFragment) getSupportFragmentManager()
+                .findFragmentByTag("HomeworkDiscriptionFragment");
+        if (homeworkDiscriptionFragment != null) {
+            homeworkDiscriptionFragment.onPdfAttachmentClicked();
+        }
+    }
+
+    @Override
+    public void onConfirmClickedPhoto(Bitmap bitmap) {
+        homeworkDiscriptionFragment= (HomeworkDiscriptionFragment) getSupportFragmentManager()
+                .findFragmentByTag("HomeworkDiscriptionFragment");
+        if (homeworkDiscriptionFragment != null) {
+            homeworkDiscriptionFragment.onImageClicked(bitmap);
+        }
     }
 }

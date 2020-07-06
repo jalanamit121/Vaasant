@@ -1,4 +1,5 @@
 package com.winbee.vaasant.Ui;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -45,6 +47,8 @@ public class HomeworkFragment extends Fragment implements HomeworkAdapter.OnHOme
 
     ArrayList<HomeworkModel> homeworkModelArrayList;
 
+    Button subittedAssignment;
+
 
     public HomeworkFragment() {
         // Required empty public constructor
@@ -61,6 +65,7 @@ public class HomeworkFragment extends Fragment implements HomeworkAdapter.OnHOme
     public void onViewCreated(View view, Bundle savedInstanceState) {
         assignmentView=getActivity().findViewById(R.id.recycler_view_homework);
         today_classes=getActivity().findViewById(R.id.today_classes);
+        subittedAssignment=view.findViewById(R.id.submittedAssignmentBtn);
         progressBarUtil   =  new ProgressBarUtil(getActivity());
         Userid= SharedPrefManager.getInstance(getActivity()).refCode().getUserId();
         callAllAssignment(Userid);
@@ -90,7 +95,7 @@ public class HomeworkFragment extends Fragment implements HomeworkAdapter.OnHOme
                         Log.d("TAG", "onResponse: "+list);
                         Log.d("TAG", "onResponse: "+list.size());
                     }else{
-                       today_classes.setVisibility(View.VISIBLE);
+                        today_classes.setVisibility(View.VISIBLE);
                         progressBarUtil.hideProgress();
                     }
                 } else{
@@ -106,49 +111,55 @@ public class HomeworkFragment extends Fragment implements HomeworkAdapter.OnHOme
                 System.out.println("Suree: Error "+t.getMessage());
             }
         });
+
+        subittedAssignment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                startActivity(new Intent(getContext(),SubmitedAssignment.class));
+                SubmitedAssignment submitedAssignment = new SubmitedAssignment();
+                FragmentTransaction fragmentTransaction= null;
+                if (getFragmentManager() != null) {
+                    fragmentTransaction = getFragmentManager().beginTransaction()
+                            .replace(R.id.homeFrame,submitedAssignment,"SubmitedAssignment");
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+
+
+            }
+        });
+
     }
 
     @Override
     public void onHomeworkClicked(int position) {
 
-        HomeworkDiscriptionFragment homeworkDiscriptionFragment= new HomeworkDiscriptionFragment();
+        assignmentToSubmit assignmentToSubmit= new assignmentToSubmit();
         FragmentTransaction fragmentTransaction= null;
         if (getFragmentManager() != null) {
             fragmentTransaction = getFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.homeFrame,homeworkDiscriptionFragment,"HomeworkDiscriptionFragment");
+                    .replace(R.id.homeFrame,assignmentToSubmit,"HomeworkDiscriptionFragment");
+
+            Bundle bundleHomework= new Bundle();
+            bundleHomework.putString("title",list.get(position).getTopic());
+            bundleHomework.putString("subject",list.get(position).getSubject());
+            bundleHomework.putString("date",list.get(position).getStart_date());
+            bundleHomework.putString("pdfUrl",list.get(position).getContent_name());
+            bundleHomework.putString("bucketId",list.get(position).getBucketId());
+            bundleHomework.putString("assignmentId",list.get(position).getAssignment_id());
+            assignmentToSubmit.setArguments(bundleHomework);
+
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+
+
         }
-
-        Bundle bundleHomework= new Bundle();
-        bundleHomework.putString("title",list.get(position).getTopic());
-        bundleHomework.putString("subject",list.get(position).getSubject());
-        bundleHomework.putString("date",list.get(position).getStart_date());
-        bundleHomework.putString("pdfUrl",list.get(position).getContent_name());
-        homeworkDiscriptionFragment.setArguments(bundleHomework);
-
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+//done boss phle jesa hogya
+        // okk
+        //
     }
-
-
-//    @Override
-//    public void onHomeworkClicked(int position) {
-//
-//        HomeworkDiscriptionFragment homeworkDiscriptionFragment= new HomeworkDiscriptionFragment();
-//        FragmentTransaction fragmentTransaction= getChildFragmentManager()
-//                .beginTransaction()
-//                .replace(R.id.homeFrame,homeworkDiscriptionFragment,"HomeworkDiscriptionFragment");
-//
-//        Bundle bundleHomework= new Bundle();
-//        bundleHomework.putString("title",homeworkModelArrayList.get(position).getTitle());
-//        bundleHomework.putString("subject",homeworkModelArrayList.get(position).getSubject());
-//        bundleHomework.putString("date",homeworkModelArrayList.get(position).getDate());
-//        bundleHomework.putString("pdfUrl",homeworkModelArrayList.get(position).getPdfUrl());
-//
-//        homeworkDiscriptionFragment.setArguments(bundleHomework);
-//
-//        fragmentTransaction.addToBackStack(null);
-//        fragmentTransaction.commit();
-//
-//    }
 }
+
+

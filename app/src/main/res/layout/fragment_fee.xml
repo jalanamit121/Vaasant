@@ -1,17 +1,330 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ui.FeeFragment"
     android:clickable="true"
     android:focusable="true"
-    >
+    tools:context=".Ui.FeeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/cardViewOne"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        app:cardCornerRadius="10dp"-->
+    <!--        app:cardMaxElevation="5dp"-->
+    <!--        app:cardUseCompatPadding="true">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/feeImageFee"-->
+    <!--                android:layout_width="100dp"-->
+    <!--                android:layout_height="100dp"-->
+    <!--                android:layout_centerHorizontal="true"-->
+    <!--                android:layout_marginTop="5dp"-->
+    <!--                android:src="@drawable/fee" />-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/textClassMyProfile"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/feeImageFee"-->
+    <!--                android:layout_centerHorizontal="true"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:layout_marginTop="15dp"-->
+    <!--                android:text="Fee Details"-->
+    <!--                android:textColor="@android:color/holo_orange_dark"-->
+    <!--                android:textSize="24sp"-->
+    <!--                android:textStyle="bold" />-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/studentNameFee"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/textClassMyProfile"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:text="Account Holder  : \nName "-->
+
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="18sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/accountHolderNameFee"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/textClassMyProfile"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:layout_toEndOf="@id/studentNameFee"-->
+    <!--                android:text="Vasant Valley Shiksha Samiti"-->
+    <!--                android:textAlignment="gravity"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="18sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/rollNumberMyProfile"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/accountHolderNameFee"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+
+    <!--                android:text="Account no.         :      50100098048350"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="18sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/phoneNumberMyProfile"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/rollNumberMyProfile"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:text="IFSC Code                 :       HDFC0003439"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="16sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/WebsiteTitleFee"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/phoneNumberMyProfile"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:layout_marginBottom="20dp"-->
+    <!--                android:text="Website                     : "-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="16sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/WebsiteFee"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/phoneNumberMyProfile"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_toEndOf="@id/WebsiteTitleFee"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:layout_marginBottom="20dp"-->
+    <!--                android:text="https://vasantvalleyjaipur.org/fee.php"-->
+    <!--                android:linksClickable="true"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="16sp" />-->
+
+    <!--        </RelativeLayout>-->
+
+    <!--    </androidx.cardview.widget.CardView>-->
+
+    <ImageView
+        android:id="@+id/feeImageFee"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/fee" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/selectYourClass"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/feeImageFee"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Select Your Class :"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
 
-</FrameLayout>
+    <Spinner
+        android:id="@+id/dropDownClass"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/feeImageFee"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/selectYourClass" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectYourClass"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textClassMyProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Fee Details"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/addmissiontitleFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textClassMyProfile"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Addmission Fee           :"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/addmissionFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textClassMyProfile"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/addmissiontitleFee"
+                android:text=""
+                android:textAlignment="gravity"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/annualTitionfeetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addmissionFee"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+
+                android:text="Annual Tution Fee        :"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/AnnualTitionFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addmissionFee"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/annualTitionfeetitle"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/firstInstallmentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/AnnualTitionFee"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="First Installment           :"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/firstInstallment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/AnnualTitionFee"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:layout_toEndOf="@id/firstInstallmentTitle"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/secondInstallmentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstInstallmentTitle"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Second Installment      :"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/secondInstallment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstInstallmentTitle"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:layout_toEndOf="@id/firstInstallmentTitle"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/thirdInstallmentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondInstallment"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Third Installment           :"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/thirdInstallment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondInstallment"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:layout_marginBottom="20dp"
+                android:layout_toEndOf="@id/firstInstallmentTitle"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
