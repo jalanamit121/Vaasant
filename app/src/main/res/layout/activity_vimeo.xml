@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VimeoPlayerActivity">
+
+    <!--    <VideoView-->
+    <!--        android:id="@+id/vimeo_video"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/play_btn"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:text="Play"/>-->
+    <com.ct7ct7ct7.androidvimeoplayer.view.VimeoPlayerView
+        android:id="@+id/vimeoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:autoPlay="true"
+        app:loop="false"
+        app:muted="false"
+        app:showFullscreenOption="true"
+        app:showMenuOption="false"
+        app:showOriginalControls="true"
+        app:showTitle="false"
+        app:topicColor="#FFFF00"
+        app:quality="auto"
+        app:backgroundColor="#00FFFF"
+        >
+
+    </com.ct7ct7ct7.androidvimeoplayer.view.VimeoPlayerView>
+
+
+
+</RelativeLayout>
+
+

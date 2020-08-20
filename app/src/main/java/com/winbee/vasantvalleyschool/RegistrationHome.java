@@ -1,0 +1,15 @@
+package com.winbee.vasantvalleyschool;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+
+public class RegistrationHome extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_registration_home);
+    }
+}//yeh khali he boss

@@ -1,64 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_color"
-    tools:context=".Activity.GecYouTubeActivity">
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/youtube_player"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".GecYouTubeActivity">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"></com.google.android.youtube.player.YouTubePlayerView>
-    <TextView
-        android:id="@+id/video_subject"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/youtube_player"
-        android:text=""
-        android:textColor="#111"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"/>
-
-    <TextView
-        android:id="@+id/video_topic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/video_subject"
-        android:text=""
-        android:textColor="#111"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"/>
-
-    <TextView
-        android:id="@+id/video_teacher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/video_topic"
-        android:text=""
-        android:textColor="#111"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"/>
-
-    <TextView
-        android:id="@+id/video_coaching"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/video_teacher"
-        android:text=""
-        android:textColor="#111"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"/>
-
-
-
-
-
+        android:layout_height="match_parent"
+        android:id="@+id/youtube_player"
+        app:showFullScreenButton="true"
+        app:showSeekBar="true"
+        app:showYouTubeButton="false"/>
 
 
 </RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+
+    android:id="@+id/branch_live1"
+    android:elevation="3dp"
+    android:clickable="true"
+    android:background="@drawable/shadow"
+   >
+
+    <RelativeLayout
+        android:id="@+id/branch_live"
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="wrap_content">
+
+
+
+        <ImageView
+            android:id="@+id/live_image"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/logo"
+            android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/live_topic"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_sans_extrabold"
+                    android:layout_toRightOf="@id/live_image"
+                    android:text="amit kumar jalan"
+                    android:textColor="#030303"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/live_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/live_topic"
+                    android:fontFamily="@font/nunito_sans_extrabold"
+                    android:layout_toRightOf="@id/live_image"
+                    android:text="subject"
+                    android:textColor="@color/edit_text"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/live_teacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/live_image"
+                    android:fontFamily="@font/nunito_sans_extrabold"
+                    android:layout_below="@id/live_subject"
+                    android:text="mr amit"
+                    android:textColor="@color/edit_text"
+                    android:textSize="12sp" />
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="#111"
+    android:layout_below="@id/live_image"/>
+        <ImageView
+            android:id="@+id/time_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_baseline_access_time_24"
+            android:layout_below="@id/live_image"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:textColor="@color/edit_text"
+            android:textSize="12sp"
+            android:text="amit"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/time_image"
+            android:fontFamily="@font/nunito_sans_extrabold"
+            android:layout_below="@id/live_image"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/video_started"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Started yet"
+            android:visibility="visible"
+            android:layout_below="@id/live_image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"
+            android:textColor="#E72626"
+            android:textSize="10sp" />
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/image_gif"
+            android:layout_width="30dp"
+            android:visibility="visible"
+            android:layout_marginRight="5dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/live_image"
+            android:layout_toLeftOf="@id/video_started"
+            android:src="@drawable/pulse"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

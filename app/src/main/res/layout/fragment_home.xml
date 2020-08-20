@@ -12,7 +12,6 @@
 
     >
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -32,7 +31,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/download" />
+                android:src="@drawable/ic_businessman" />
 
             <TextView
                 android:id="@+id/profile_name_home"

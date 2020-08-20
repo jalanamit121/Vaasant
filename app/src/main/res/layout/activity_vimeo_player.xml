@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VimeoPlayerActivity">
+
+<!--    <VideoView-->
+<!--        android:id="@+id/vimeo_video"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+<!--    <Button-->
+<!--        android:id="@+id/play_btn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:text="Play"/>-->
+    <com.ct7ct7ct7.androidvimeoplayer.view.VimeoPlayerView
+        android:id="@+id/vimeoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:autoPlay="false"
+        app:loop="false"
+        app:muted="false"
+        app:showFullscreenOption="false"
+        app:showMenuOption="false"
+        app:showOriginalControls="false"
+        app:showTitle="true"
+        app:topicColor="#FFFF00"
+        app:quality="auto"
+        app:backgroundColor="#00FFFF"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/playerStateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="@string/player_state"/>
+
+        <TextView
+            android:id="@+id/playerCurrentTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="@string/player_current_time"/>
+
+        <TextView
+            android:id="@+id/playerVolumeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="@string/player_volume"/>
+
+        <SeekBar
+            android:id="@+id/volumeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/playButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play"/>
+
+            <Button
+                android:id="@+id/pauseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pause"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/getCurrentTimeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get current time"/>
+
+        <Button
+            android:id="@+id/loadVideoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="load other video"/>
+
+        <Button
+            android:id="@+id/colorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="set topic color"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+

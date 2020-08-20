@@ -13,15 +13,12 @@
         android:id="@+id/branch_name1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:clipToPadding="false"
-        android:orientation="horizontal">
+        android:clickable="true">
 
         <!--title and desc-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_alignParentTop="true">
             <ImageView
                 android:id="@+id/branch_image"
@@ -29,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:src="@drawable/dummy"/>
+                android:src="@drawable/course_design_securityexpert"/>
             <TextView
                 android:id="@+id/gec_branchname"
                 android:layout_width="match_parent"
@@ -39,9 +36,9 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_below="@id/branch_image"
-                android:text=""
+                android:text="amit kumar jalan"
                 android:textColor="#8CE425"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
         </RelativeLayout>
     </RelativeLayout>
 

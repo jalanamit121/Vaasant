@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/title_bar_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/backHome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_keyboard_backspace_black_24dp" />
+
+
+        <TextView
+            android:id="@+id/titleHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="About Us"
+            android:textColor="#111"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="77dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp">
+            <ImageView
+                android:id="@+id/companylogo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/logo"/>
+
+
+            <TextView
+                android:id="@+id/aboutus_textview1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="2dp"
+                android:paddingRight="10dp"
+                android:layout_below="@id/companylogo"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#111"
+                android:text="VASANT VALLEY SCHOOL - BENAD ROAD JAIPUR was establised in 1990 and operated by Pvt. Unaided. This School is located in Near Balaji College, Benad Road, Macheda, Jhotwara City, Jaipur, Rajasthan. The school is Co-educational, State Board and Hindi is the medium of instructions in this school."
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/aboutus_textview6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="CONTACT US:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_below="@id/aboutus_textview1"
+                android:textColor="#111"/>
+
+            <TextView
+                android:id="@+id/aboutus_textview7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="Vasant Valley School"
+                android:textSize="16sp"
+                android:layout_below="@id/aboutus_textview6"
+                android:textColor="#111"/>
+            <TextView
+                android:id="@+id/aboutus_textview8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="C/O JECRC ACCELERATORS
+Shri Ram ki Nangal, via Sitapura RIICO
+Tonk Road, Jaipur, Rajasthan - 302022"
+                android:textSize="16sp"
+                android:layout_below="@id/aboutus_textview7"
+                android:textColor="#111"/>
+            <TextView
+                android:id="@+id/aboutus_textview9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="Write Us:"
+                android:textSize="16sp"
+                android:layout_below="@id/aboutus_textview8"
+                android:textColor="#111"/>
+            <TextView
+                android:id="@+id/aboutus_textview10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="support@vidhyant.com"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/aboutus_textview9"
+                android:layout_below="@id/aboutus_textview8"
+                android:textColor="#03A9F4"/>
+            <TextView
+                android:id="@+id/aboutus_textview11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="For Technical Issues:"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_below="@id/aboutus_textview10"
+                android:textColor="#111"/>
+            <TextView
+                android:id="@+id/aboutus_textview12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="Winbee Solutions"
+                android:textSize="16sp"
+                android:layout_below="@id/aboutus_textview11"
+                android:textColor="#111"/>
+            <TextView
+                android:id="@+id/aboutus_textview13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="E-502 Sector-78 Noida Uttar Pradesh, India PIN Code: 201301"
+                android:textSize="16sp"
+                android:layout_below="@id/aboutus_textview12"
+                android:textColor="#111"/>
+            <TextView
+                android:id="@+id/aboutus_textview14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="Write Us:"
+                android:textSize="16sp"
+                android:layout_below="@id/aboutus_textview13"
+                android:textColor="#111"/>
+            <TextView
+                android:id="@+id/aboutus_textview15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="info@winbee.in"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/aboutus_textview14"
+                android:layout_below="@id/aboutus_textview13"
+                android:textColor="#03A9F4"/>
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

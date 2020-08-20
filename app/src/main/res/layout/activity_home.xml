@@ -1,151 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ui.Home"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-
-    >
-
-
-    <RelativeLayout
-        android:id="@+id/title_bar_home"
+    <include
+        layout="@layout/content_home"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true">
+        android:layout_height="match_parent" />
 
-        <ImageView
-            android:id="@+id/sideBarHome"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/ic_baseline_menu_24" />
-
-
-        <ImageView
-            android:id="@+id/notificationHome"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/ic_baseline_notifications_24" />
-
-        <TextView
-            android:id="@+id/titleHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:fontFamily="@font/nunito_extrabold"
-            android:text="HOME"
-            android:textColor="@android:color/black"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/footerHome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        >
-
-
-        <ImageView
-            android:id="@+id/homeHome"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/ic_round_home_24"
-            />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-          android:layout_marginStart="80dp"
-            android:layout_marginEnd="80dp"
-
-            >
-            <ImageView
-               android:id="@+id/WebsiteHome"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="20dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/ic_outline_public_24"
-                />
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_centerInParent="true"
-                android:id="@+id/aboutUsHome"
-                android:src="@drawable/ic_outline_people_24"
-
-
-                />
-
-            <ImageView
-                android:id="@+id/contactUsHome"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="20dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="20dp"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/ic_baseline_call_24"
-                />
-
-
-
-        </RelativeLayout>
-
-
-        <ImageView
-            android:id="@+id/logOutHome"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="20dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/ic_baseline_lock_open_24"
-
-            />
-
-    </RelativeLayout>
-
-    <FrameLayout
-        android:id="@+id/homeFrame"
-        android:layout_width="match_parent"
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_below="@+id/title_bar_home"
-        android:layout_above="@+id/footerHome"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
 
-        />
-
-
-</RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

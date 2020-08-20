@@ -3,6 +3,25 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="went_wrong">Something Went Wrong</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">My Profile</string>
+    <string name="menu_video">Live Class</string>
+    <string name="menu_online_test">Online Test</string>
+    <string name="menu_chat">Chat With Support Team</string>
+    <string name="menu_about">About Us</string>
+    <string name="menu_founder">About Founder</string>
+    <string name="menu_contact">Contact Us</string>
+    <string name="menu_rate">Rate Us</string>
+    <string name="menu_invite">Logout</string>
+    <string name="menu_share">Share</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="player_state">player state: %1$s</string>
+    <string name="player_current_time">current time: %1$ss</string>
+    <string name="player_volume">volume: %1$s</string>
+
+
     <string-array name="batch">
         <item>Class XII - Science</item>
         <item>Class XII - Biology</item>
